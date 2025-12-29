@@ -399,6 +399,9 @@ Responsive Design for filters
     .filter-buttons-inline {
         gap: 8px;
     }
+    .asm3-filters {
+        gap: 8px;
+    }
 
     .category-btn {
         padding: 7px 10px;
@@ -420,6 +423,9 @@ Responsive Design for filters
     }
 
     .filter-buttons-inline {
+        gap: 6px;
+    }
+    .asm3-filters {
         gap: 6px;
     }
 
@@ -532,6 +538,9 @@ Responsive Design for filters
     .filter-buttons-inline {
         gap: 6px;
     }
+    .asm3-filters {
+        gap: 6px;
+    }
 
     .category-btn {
         padding: 6px 6px;
@@ -581,6 +590,11 @@ Responsive Design for filters
 
 @media (max-width: 480px) {
     .filter-actions-inline {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    .asm3-filters {
         flex-direction: column;
         gap: 8px;
         align-items: stretch;
@@ -647,6 +661,120 @@ Header
     margin: 0 auto;
     color: var(--color-text-secondary);
 }
+
+/* ============================================
+ASM3 Filters
+============================================ */
+.asm3-filters {
+    background: var(--color-card-bg);
+    border-radius: 15px;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 4px 20px rgba(184, 121, 142, 0.1);
+    border: 1px solid var(--color-accent-3);
+    width: 100%;
+    overflow: visible;
+}
+
+#asm3-select-breed, #asm3-select-agegroup, #asm3-select-sex, #asm3-select-goodwith {
+    /*display: flex;
+    align-items: center;*/
+    gap: 4px;
+    padding: 8px 12px;
+    background: transparent;
+    color: var(--color-text);
+    border: 2px dashed var(--color-accent-3);
+    border-radius: 18px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    max-width: 160px;
+}
+
+#asm3-select-breed:hover, #asm3-select-agegroup:hover, #asm3-select-sex:hover, #asm3-select-goodwith:hover {
+    border-color: var(--color-accent-2);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(184, 121, 142, 0.15);
+}
+
+#asm3-select-breed.active, #asm3-select-agegroup.active, #asm3-select-sex.active, #asm3-select-goodwith.active {
+    background: var(--color-accent-2);
+    color: white;
+    border-color: var(--color-accent-2);
+}
+
+#asm3-select-breed.has-selections, #asm3-select-agegroup.has-selections, #asm3-select-sex.has-selections, #asm3-select-goodwith.has-selections {
+    background: var(--color-accent-2);
+    border-color: var(--color-accent-2);
+    border-style: solid;
+    color: white;
+    font-weight: 500;
+}
+
+/* ============================================
+ASM3 Grid
+============================================ */
+.asm3-adoptable-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+    justify-content: flex-start;
+    margin-bottom: 100px;
+}
+.asm3-adoptable-name { 
+    font-weight: bold; 
+    text-decoration: none;
+}
+.asm3-adoptable-item {
+    flex: 1 1 calc(33.333% - 25px);
+    max-width: calc(33.333% - 25px);
+    background: var(--color-card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(99, 102, 175, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--color-accent-3);
+}
+.asm3-adoptable-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(99, 102, 175, 0.2);
+}
+.asm3-adoptable-thumbnail {
+    width: 120%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    margin: -10% 0 0 -10%;
+}
+.asm3-adoptable-item:hover .asm3-adoptable-thumbnail {
+    transform: scale(1.05);
+}
+.asm3-adoptable-name {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+.asm3-adoptable-tagline {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.asm3-adoptable-tag {
+    background: var(--color-accent-3);
+    color: var(--color-accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
 
 /* ============================================
 Cats Grid
